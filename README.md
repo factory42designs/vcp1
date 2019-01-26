@@ -11,6 +11,7 @@ touch screen
   `git clone https://github.com/jethornton/vcp1.git`
 3) Install with pip:
   `pip install -e .`
+4) Copy the LinuxCNC configuration folder to ~/linuxcnc/configs
 5) Edit the files to customize name etc.
 6) Edit the layout in QtDesigner by running:
   `editvcp vcp1`
