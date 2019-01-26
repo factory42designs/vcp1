@@ -8,7 +8,7 @@ touch screen
 
 1) Fork this repository to your github account.
 2) Clone it to your local machine:
-  `git clone https://github.com/jethornton/vcp1.git`
+  ``git clone https://github.com/jethornton/vcp1.git``
 3) change to the vcp1 directory with `cd vcp1`.
 4) Install with pip: `pip install -e .`
 5) Copy the LinuxCNC configuration folder to ~/linuxcnc/configs
