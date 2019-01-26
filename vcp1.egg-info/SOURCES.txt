@@ -1,0 +1,11 @@
+MANIFEST.in
+README.md
+setup.py
+vcp1/__init__.py
+vcp1/mainwindow.py
+vcp1.egg-info/PKG-INFO
+vcp1.egg-info/SOURCES.txt
+vcp1.egg-info/dependency_links.txt
+vcp1.egg-info/entry_points.txt
+vcp1.egg-info/requires.txt
+vcp1.egg-info/top_level.txt
