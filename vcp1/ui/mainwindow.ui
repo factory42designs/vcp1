@@ -701,7 +701,7 @@ font: 14pt &quot;DejaVu Sans&quot;; }</string>
              <enum>QTabWidget::South</enum>
             </property>
             <property name="currentIndex">
-             <number>0</number>
+             <number>1</number>
             </property>
             <widget class="QWidget" name="tab">
              <attribute name="title">
@@ -928,7 +928,7 @@ Z</string>
                     <set>Qt::AlignCenter</set>
                    </property>
                    <property name="rules" stdset="0">
-                    <string>[{&quot;channels&quot;: [{&quot;url&quot;: &quot;status:g92_offset&quot;, &quot;trigger&quot;: true}], &quot;property&quot;: &quot;Text&quot;, &quot;expression&quot;: &quot;str(ch[0][1])&quot;, &quot;name&quot;: &quot;Y Axis G92 Offset&quot;}]</string>
+                    <string>[{&quot;channels&quot;: [{&quot;url&quot;: &quot;status:g92_offset&quot;, &quot;trigger&quot;: true}], &quot;property&quot;: &quot;Text&quot;, &quot;expression&quot;: &quot;'{:.4f}'.format(ch[0][1])&quot;, &quot;name&quot;: &quot;Y Axis G92 Offset&quot;}]</string>
                    </property>
                   </widget>
                  </item>
@@ -938,7 +938,7 @@ Z</string>
                     <set>Qt::AlignCenter</set>
                    </property>
                    <property name="rules" stdset="0">
-                    <string>[{&quot;channels&quot;: [{&quot;url&quot;: &quot;status:g5x_offset&quot;, &quot;trigger&quot;: true}], &quot;property&quot;: &quot;Text&quot;, &quot;expression&quot;: &quot;str(ch[0][1])&quot;, &quot;name&quot;: &quot;Y Axis G5x Offset&quot;}]</string>
+                    <string>[{&quot;channels&quot;: [{&quot;url&quot;: &quot;status:g5x_offset&quot;, &quot;trigger&quot;: true}], &quot;property&quot;: &quot;Text&quot;, &quot;expression&quot;: &quot;'{:.4f}'.format(ch[0][1])&quot;, &quot;name&quot;: &quot;Y Axis G5x Offset&quot;}]</string>
                    </property>
                   </widget>
                  </item>
@@ -948,7 +948,7 @@ Z</string>
                     <set>Qt::AlignCenter</set>
                    </property>
                    <property name="rules" stdset="0">
-                    <string>[{&quot;channels&quot;: [{&quot;url&quot;: &quot;status:g92_offset&quot;, &quot;trigger&quot;: true}], &quot;property&quot;: &quot;Text&quot;, &quot;expression&quot;: &quot;str(ch[0][0])&quot;, &quot;name&quot;: &quot;X Axis G92 Offset&quot;}]</string>
+                    <string>[{&quot;channels&quot;: [{&quot;url&quot;: &quot;status:g92_offset&quot;, &quot;trigger&quot;: true}], &quot;property&quot;: &quot;Text&quot;, &quot;expression&quot;: &quot;'{:.4f}'.format(ch[0][0])&quot;, &quot;name&quot;: &quot;X Axis G92 Offset&quot;}]</string>
                    </property>
                   </widget>
                  </item>
@@ -988,7 +988,7 @@ Z</string>
                     <set>Qt::AlignCenter</set>
                    </property>
                    <property name="rules" stdset="0">
-                    <string>[{&quot;channels&quot;: [{&quot;url&quot;: &quot;status:g92_offset&quot;, &quot;trigger&quot;: true}], &quot;property&quot;: &quot;Text&quot;, &quot;expression&quot;: &quot;str(ch[0][2])&quot;, &quot;name&quot;: &quot;Z Axis G92 Offset&quot;}]</string>
+                    <string>[{&quot;channels&quot;: [{&quot;url&quot;: &quot;status:g92_offset&quot;, &quot;trigger&quot;: true}], &quot;property&quot;: &quot;Text&quot;, &quot;expression&quot;: &quot;'{:.4f}'.format(ch[0][2])&quot;, &quot;name&quot;: &quot;Z Axis G92 Offset&quot;}]</string>
                    </property>
                   </widget>
                  </item>
@@ -1060,7 +1060,7 @@ X</string>
                     <set>Qt::AlignCenter</set>
                    </property>
                    <property name="rules" stdset="0">
-                    <string>[{&quot;channels&quot;: [{&quot;url&quot;: &quot;status:g5x_offset&quot;, &quot;trigger&quot;: true}], &quot;property&quot;: &quot;Text&quot;, &quot;expression&quot;: &quot;str(ch[0][0])&quot;, &quot;name&quot;: &quot;X Axis G5x Offset&quot;}]</string>
+                    <string>[{&quot;channels&quot;: [{&quot;url&quot;: &quot;status:g5x_offset&quot;, &quot;trigger&quot;: true}], &quot;property&quot;: &quot;Text&quot;, &quot;expression&quot;: &quot;'{:.4f}'.format(ch[0][0])&quot;, &quot;name&quot;: &quot;X Axis G5x Offset&quot;}]</string>
                    </property>
                   </widget>
                  </item>
@@ -1080,7 +1080,7 @@ X</string>
                     <set>Qt::AlignCenter</set>
                    </property>
                    <property name="rules" stdset="0">
-                    <string>[{&quot;channels&quot;: [{&quot;url&quot;: &quot;status:g5x_offset&quot;, &quot;trigger&quot;: true}], &quot;property&quot;: &quot;Text&quot;, &quot;expression&quot;: &quot;str(ch[0][2])&quot;, &quot;name&quot;: &quot;Z Axis G5x Offset&quot;}]</string>
+                    <string>[{&quot;channels&quot;: [{&quot;url&quot;: &quot;status:g5x_offset&quot;, &quot;trigger&quot;: true}], &quot;property&quot;: &quot;Text&quot;, &quot;expression&quot;: &quot;'{:.4f}'.format(ch[0][2])&quot;, &quot;name&quot;: &quot;Z Axis G5x Offset&quot;}]</string>
                    </property>
                   </widget>
                  </item>
