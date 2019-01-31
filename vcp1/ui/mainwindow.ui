@@ -7,7 +7,7 @@
     <x>0</x>
     <y>0</y>
     <width>800</width>
-    <height>618</height>
+    <height>600</height>
    </rect>
   </property>
   <property name="sizePolicy">
@@ -16,8 +16,58 @@
     <verstretch>0</verstretch>
    </sizepolicy>
   </property>
+  <property name="maximumSize">
+   <size>
+    <width>800</width>
+    <height>600</height>
+   </size>
+  </property>
   <property name="windowTitle">
    <string>MainWindow</string>
+  </property>
+  <property name="styleSheet">
+   <string notr="true">ActionButton {
+min-height: 50px;
+min-width: 50px;
+font: 14pt &quot;DejaVu Sans&quot;;
+}
+ActionSlider {
+min-height: 50px;
+max-height: 50px;
+background: rgb(136, 138, 133);
+}
+ActionSlider::groove:horizontal {
+border: 1px solid rgb(0,0,0);
+height: 5px;
+margin: 0 12px;
+}
+ActionSlider::handle:horizontal {
+background: rgb(138, 226, 52);
+border: 5px solid rgb(0,0,0);
+width: 23px;
+height: 100px;
+margin: -22px -12px;
+}
+ActionSlider:disabled {
+background-color: rgb(186, 189, 182);
+}
+ActionSlider::groove:horizontal:disabled {
+border: 1px solid rgb(0,0,0);
+}
+ActionSlider::handle:horizontal:disabled {
+background: rgb(186, 189, 182);
+border: 5px solid rgb(136, 138, 133);
+}
+QPushButton {
+min-height: 50px;
+min-width: 50px;
+font: 14pt &quot;DejaVu Sans&quot;;
+}
+DialogButton {
+min-height: 50px;
+min-width: 50px;
+font: 14pt &quot;DejaVu Sans&quot;;
+}</string>
   </property>
   <widget class="QWidget" name="centralwidget">
    <layout class="QVBoxLayout" name="verticalLayout">
@@ -25,9 +75,6 @@
      <widget class="QFrame" name="verticalFrame">
       <property name="frameShape">
        <enum>QFrame::Box</enum>
-      </property>
-      <property name="lineWidth">
-       <number>2</number>
       </property>
       <layout class="QVBoxLayout" name="verticalLayout_2">
        <property name="leftMargin">
@@ -45,13 +92,12 @@
        <item>
         <widget class="QFrame" name="horizontalFrame">
          <property name="styleSheet">
-          <string notr="true">QTabBar::tab { height: 50px; width: 100px; }</string>
+          <string notr="true">QTabBar::tab {
+height: 50px; width: 90px;
+font: 14pt &quot;DejaVu Sans&quot;; }</string>
          </property>
          <property name="frameShape">
           <enum>QFrame::Box</enum>
-         </property>
-         <property name="lineWidth">
-          <number>2</number>
          </property>
          <layout class="QHBoxLayout" name="horizontalLayout">
           <property name="leftMargin">
@@ -67,14 +113,14 @@
            <number>5</number>
           </property>
           <item>
-           <widget class="QTabWidget" name="tabWidget">
+           <widget class="QTabWidget" name="tabWidget_2">
             <property name="tabPosition">
              <enum>QTabWidget::South</enum>
             </property>
             <property name="currentIndex">
              <number>0</number>
             </property>
-            <widget class="QWidget" name="tab">
+            <widget class="QWidget" name="tab_3">
              <attribute name="title">
               <string>Jog</string>
              </attribute>
@@ -82,71 +128,31 @@
               <item row="0" column="0">
                <widget class="QFrame" name="gridFrame">
                 <property name="styleSheet">
-                 <string notr="true">ActionButton {
-    min-height: 50px;
-    min-width: 50px;
-    max-height: 50px;
-    max-width: 50px;
-    font: 14pt &quot;DejaVu Sans&quot;;
-}
-QLabel {
-    font: 14pt &quot;DejaVu Sans&quot;;
-}
-ActionSlider {
-    min-height: 50px;
-    max-height: 50px;
-    background: rgb(136, 138, 133);
-}
-ActionSlider::groove:horizontal {
-    border: 1px solid rgb(0,0,0);
-    height: 5px;
-    margin: 0 12px;
-}
-ActionSlider::handle:horizontal {
-    background: rgb(138, 226, 52);
-    border: 5px solid rgb(0,0,0);
-    width: 23px;
-    height: 100px;
-    margin: -22px -12px;
-}
-ActionSlider:disabled {
-    background-color: rgb(186, 189, 182);
-}
-ActionSlider::groove:horizontal:disabled {
-    border: 1px solid rgb(0,0,0);
-}
-ActionSlider::handle:horizontal:disabled {
-    background: rgb(186, 189, 182);
-    border: 5px solid rgb(136, 138, 133);
-}</string>
+                 <string notr="true">QLabel {font: 14pt &quot;DejaVu Sans&quot;;}</string>
                 </property>
                 <property name="frameShape">
-                 <enum>QFrame::NoFrame</enum>
+                 <enum>QFrame::Box</enum>
                 </property>
                 <layout class="QGridLayout" name="gridLayout_2">
+                 <property name="leftMargin">
+                  <number>5</number>
+                 </property>
                  <property name="topMargin">
-                  <number>1</number>
+                  <number>5</number>
+                 </property>
+                 <property name="rightMargin">
+                  <number>5</number>
                  </property>
                  <property name="bottomMargin">
-                  <number>1</number>
+                  <number>5</number>
                  </property>
-                 <property name="verticalSpacing">
-                  <number>1</number>
-                 </property>
-                 <item row="0" column="2">
+                 <item row="2" column="2">
                   <widget class="ActionButton" name="actionbutton_9">
                    <property name="text">
-                    <string>X-</string>
+                    <string>Z-</string>
                    </property>
                    <property name="actionName" stdset="0">
-                    <string>machine.jog.axis:x,neg</string>
-                   </property>
-                  </widget>
-                 </item>
-                 <item row="0" column="0">
-                  <widget class="QLabel" name="label_3">
-                   <property name="text">
-                    <string>X Axis</string>
+                    <string>machine.jog.axis:z,neg</string>
                    </property>
                   </widget>
                  </item>
@@ -160,6 +166,29 @@ ActionSlider::handle:horizontal:disabled {
                    </property>
                   </widget>
                  </item>
+                 <item row="0" column="0">
+                  <widget class="QLabel" name="label">
+                   <property name="text">
+                    <string>X Axis</string>
+                   </property>
+                  </widget>
+                 </item>
+                 <item row="3" column="0" colspan="4">
+                  <widget class="QGroupBox" name="gridGroupBox">
+                   <property name="title">
+                    <string>Jog Override</string>
+                   </property>
+                   <layout class="QGridLayout" name="gridLayout_6">
+                    <item row="0" column="0">
+                     <widget class="ActionSlider" name="actionslider">
+                      <property name="orientation">
+                       <enum>Qt::Horizontal</enum>
+                      </property>
+                     </widget>
+                    </item>
+                   </layout>
+                  </widget>
+                 </item>
                  <item row="1" column="3">
                   <widget class="ActionButton" name="actionbutton_12">
                    <property name="text">
@@ -170,13 +199,20 @@ ActionSlider::handle:horizontal:disabled {
                    </property>
                   </widget>
                  </item>
-                 <item row="2" column="2">
-                  <widget class="ActionButton" name="actionbutton_13">
+                 <item row="2" column="3">
+                  <widget class="ActionButton" name="actionbutton_10">
                    <property name="text">
-                    <string>Z-</string>
+                    <string>Z+</string>
                    </property>
                    <property name="actionName" stdset="0">
-                    <string>machine.jog.axis:z,neg</string>
+                    <string>machine.jog.axis:z,pos</string>
+                   </property>
+                  </widget>
+                 </item>
+                 <item row="2" column="0">
+                  <widget class="QLabel" name="label_3">
+                   <property name="text">
+                    <string>Z Axis</string>
                    </property>
                   </widget>
                  </item>
@@ -187,135 +223,24 @@ ActionSlider::handle:horizontal:disabled {
                    </property>
                   </widget>
                  </item>
-                 <item row="2" column="3">
-                  <widget class="ActionButton" name="actionbutton_14">
+                 <item row="0" column="2">
+                  <widget class="ActionButton" name="actionbutton_13">
                    <property name="text">
-                    <string>Z+</string>
+                    <string>X-</string>
                    </property>
                    <property name="actionName" stdset="0">
-                    <string>machine.jog.axis:z,pos</string>
+                    <string>machine.jog.axis:x,neg</string>
                    </property>
-                  </widget>
-                 </item>
-                 <item row="2" column="0">
-                  <widget class="QLabel" name="label">
-                   <property name="text">
-                    <string>Z Axis</string>
-                   </property>
-                  </widget>
-                 </item>
-                 <item row="4" column="0" colspan="4">
-                  <widget class="QGroupBox" name="gridGroupBox">
-                   <property name="title">
-                    <string>Feed Override</string>
-                   </property>
-                   <layout class="QGridLayout" name="gridLayout_8">
-                    <property name="topMargin">
-                     <number>1</number>
-                    </property>
-                    <property name="bottomMargin">
-                     <number>1</number>
-                    </property>
-                    <property name="verticalSpacing">
-                     <number>1</number>
-                    </property>
-                    <item row="0" column="0">
-                     <widget class="ActionSlider" name="actionslider_2">
-                      <property name="orientation">
-                       <enum>Qt::Horizontal</enum>
-                      </property>
-                      <property name="actionName" stdset="0">
-                       <string>machine.feed-override.set</string>
-                      </property>
-                     </widget>
-                    </item>
-                    <item row="0" column="1">
-                     <widget class="StatusLabel" name="statuslabel_2">
-                      <property name="rules" stdset="0">
-                       <string>[{&quot;channels&quot;: [{&quot;url&quot;: &quot;status:feedrate&quot;, &quot;trigger&quot;: true}], &quot;property&quot;: &quot;Text&quot;, &quot;expression&quot;: &quot;\&quot;{}%\&quot;.format(int(ch[0]*100))&quot;, &quot;name&quot;: &quot;Feed Rate&quot;}, {&quot;channels&quot;: [{&quot;url&quot;: &quot;status:enabled &quot;, &quot;trigger&quot;: true}], &quot;property&quot;: &quot;Enable&quot;, &quot;expression&quot;: &quot;ch[0]&quot;, &quot;name&quot;: &quot;Enabled&quot;}]</string>
-                      </property>
-                     </widget>
-                    </item>
-                   </layout>
-                  </widget>
-                 </item>
-                 <item row="3" column="0" colspan="4">
-                  <widget class="QGroupBox" name="gridGroupBox">
-                   <property name="title">
-                    <string>Jog Override</string>
-                   </property>
-                   <layout class="QGridLayout" name="gridLayout_5">
-                    <property name="topMargin">
-                     <number>1</number>
-                    </property>
-                    <property name="bottomMargin">
-                     <number>1</number>
-                    </property>
-                    <property name="verticalSpacing">
-                     <number>1</number>
-                    </property>
-                    <item row="0" column="0">
-                     <widget class="ActionSlider" name="actionslider">
-                      <property name="value">
-                       <number>99</number>
-                      </property>
-                      <property name="orientation">
-                       <enum>Qt::Horizontal</enum>
-                      </property>
-                      <property name="actionName" stdset="0">
-                       <string>machine.jog.set-linear-speed</string>
-                      </property>
-                     </widget>
-                    </item>
-                    <item row="0" column="1">
-                     <widget class="StatusLabel" name="statuslabel_3"/>
-                    </item>
-                   </layout>
                   </widget>
                  </item>
                  <item row="0" column="3">
-                  <widget class="ActionButton" name="actionbutton_10">
+                  <widget class="ActionButton" name="actionbutton_14">
                    <property name="text">
                     <string>X+</string>
                    </property>
                    <property name="actionName" stdset="0">
                     <string>machine.jog.axis:x,pos</string>
                    </property>
-                  </widget>
-                 </item>
-                 <item row="5" column="0" colspan="4">
-                  <widget class="QGroupBox" name="gridGroupBox">
-                   <property name="title">
-                    <string>Rapid Override</string>
-                   </property>
-                   <layout class="QGridLayout" name="gridLayout_10">
-                    <property name="topMargin">
-                     <number>1</number>
-                    </property>
-                    <property name="bottomMargin">
-                     <number>1</number>
-                    </property>
-                    <property name="verticalSpacing">
-                     <number>1</number>
-                    </property>
-                    <item row="0" column="0">
-                     <widget class="ActionSlider" name="actionslider_3">
-                      <property name="orientation">
-                       <enum>Qt::Horizontal</enum>
-                      </property>
-                      <property name="actionName" stdset="0">
-                       <string>machine.rapid-override.set</string>
-                      </property>
-                     </widget>
-                    </item>
-                    <item row="0" column="1">
-                     <widget class="StatusLabel" name="statuslabel">
-                      <property name="rules" stdset="0">
-                       <string>[{&quot;channels&quot;: [{&quot;url&quot;: &quot;status:rapidrate&quot;, &quot;trigger&quot;: true}], &quot;property&quot;: &quot;Text&quot;, &quot;expression&quot;: &quot;\&quot;{}%\&quot;.format(int(ch[0]*100))&quot;, &quot;name&quot;: &quot;Rapid Rate&quot;}, {&quot;channels&quot;: [{&quot;url&quot;: &quot;status:enabled &quot;, &quot;trigger&quot;: true}], &quot;property&quot;: &quot;Enable&quot;, &quot;expression&quot;: &quot;ch[0]&quot;, &quot;name&quot;: &quot;Enabled&quot;}]</string>
-                      </property>
-                     </widget>
-                    </item>
-                   </layout>
                   </widget>
                  </item>
                  <item row="0" column="1">
@@ -350,23 +275,28 @@ ActionSlider::handle:horizontal:disabled {
               </item>
              </layout>
             </widget>
-            <widget class="QWidget" name="tab_2">
+            <widget class="QWidget" name="tab_4">
              <attribute name="title">
               <string>File</string>
              </attribute>
-             <layout class="QGridLayout" name="gridLayout_7">
+             <layout class="QGridLayout" name="gridLayout_8">
               <item row="0" column="0">
                <widget class="QFrame" name="gridFrame">
-                <property name="styleSheet">
-                 <string notr="true">QPushButton {
-    min-height: 50px;
-    min-width: 50px;
-    font: 14pt &quot;DejaVu Sans&quot;;
-}</string>
+                <property name="frameShape">
+                 <enum>QFrame::Box</enum>
                 </property>
-                <layout class="QGridLayout" name="gridLayout_6">
+                <layout class="QGridLayout" name="gridLayout_7">
+                 <property name="leftMargin">
+                  <number>5</number>
+                 </property>
+                 <property name="topMargin">
+                  <number>5</number>
+                 </property>
+                 <property name="rightMargin">
+                  <number>5</number>
+                 </property>
                  <property name="bottomMargin">
-                  <number>1</number>
+                  <number>5</number>
                  </property>
                  <item row="0" column="0">
                   <widget class="FileSystemTable" name="filesystemtable">
@@ -374,7 +304,10 @@ ActionSlider::handle:horizontal:disabled {
                     <string>1,2</string>
                    </property>
                    <attribute name="horizontalHeaderDefaultSectionSize">
-                    <number>175</number>
+                    <number>150</number>
+                   </attribute>
+                   <attribute name="horizontalHeaderStretchLastSection">
+                    <bool>true</bool>
                    </attribute>
                    <attribute name="verticalHeaderDefaultSectionSize">
                     <number>50</number>
@@ -383,41 +316,40 @@ ActionSlider::handle:horizontal:disabled {
                  </item>
                  <item row="1" column="0">
                   <widget class="QFrame" name="gridFrame">
+                   <property name="frameShape">
+                    <enum>QFrame::Box</enum>
+                   </property>
                    <layout class="QGridLayout" name="gridLayout_9">
                     <property name="leftMargin">
-                     <number>1</number>
+                     <number>5</number>
                     </property>
                     <property name="topMargin">
-                     <number>10</number>
+                     <number>5</number>
                     </property>
-                    <item row="1" column="0">
-                     <widget class="QPushButton" name="navUp">
-                      <property name="text">
-                       <string>Up</string>
-                      </property>
-                     </widget>
-                    </item>
-                    <item row="1" column="2">
+                    <property name="rightMargin">
+                     <number>5</number>
+                    </property>
+                    <property name="bottomMargin">
+                     <number>5</number>
+                    </property>
+                    <item row="0" column="2">
                      <widget class="QPushButton" name="navSelect">
                       <property name="text">
                        <string>Select</string>
                       </property>
                      </widget>
                     </item>
-                    <item row="1" column="1">
+                    <item row="0" column="1">
                      <widget class="QPushButton" name="navDown">
                       <property name="text">
                        <string>Down</string>
                       </property>
                      </widget>
                     </item>
-                    <item row="0" column="0" colspan="3">
-                     <widget class="StatusLabel" name="statuslabel_14">
-                      <property name="frameShape">
-                       <enum>QFrame::Box</enum>
-                      </property>
-                      <property name="rules" stdset="0">
-                       <string>[{&quot;channels&quot;: [{&quot;url&quot;: &quot;status:file&quot;, &quot;trigger&quot;: true}], &quot;property&quot;: &quot;Text&quot;, &quot;expression&quot;: &quot;ch[0]&quot;, &quot;name&quot;: &quot;Loaded File&quot;}]</string>
+                    <item row="0" column="0">
+                     <widget class="QPushButton" name="navUp">
+                      <property name="text">
+                       <string>Up</string>
                       </property>
                      </widget>
                     </item>
@@ -431,315 +363,15 @@ ActionSlider::handle:horizontal:disabled {
             </widget>
             <widget class="QWidget" name="tab_5">
              <attribute name="title">
-              <string>Offsets</string>
+              <string>MDI</string>
              </attribute>
-             <layout class="QGridLayout" name="gridLayout_12">
+             <layout class="QGridLayout" name="gridLayout_11">
               <item row="0" column="0">
                <widget class="QFrame" name="gridFrame">
-                <property name="styleSheet">
-                 <string notr="true">DialogButton {
-    min-height: 50px;
-    min-width: 50px;
-    font: 14pt &quot;DejaVu Sans&quot;;
-}
-ActionButton {
-    min-height: 50px;
-    min-width: 50px;
-    font: 14pt &quot;DejaVu Sans&quot;;
-}
-MDIButton {
-    min-height: 50px;
-    min-width: 50px;
-    font: 14pt &quot;DejaVu Sans&quot;;
-}
-StatusLabel {
-    font: 12pt &quot;DejaVu Sans&quot;;
-}
-QLabel {
-    font: 12pt &quot;DejaVu Sans&quot;;
-}</string>
-                </property>
-                <layout class="QGridLayout" name="gridLayout_11">
-                 <item row="2" column="0">
-                  <widget class="MDIButton" name="mdibutton">
-                   <property name="text">
-                    <string>Set
-X0</string>
-                   </property>
-                   <property name="MDICommand" stdset="0">
-                    <string>G10L20P0X0</string>
-                   </property>
-                  </widget>
-                 </item>
-                 <item row="3" column="0">
-                  <widget class="MDIButton" name="mdibutton_2">
-                   <property name="text">
-                    <string>Set
-Y0</string>
-                   </property>
-                   <property name="MDICommand" stdset="0">
-                    <string>G10L20P0Y0</string>
-                   </property>
-                  </widget>
-                 </item>
-                 <item row="3" column="1">
-                  <widget class="QLabel" name="label_6">
-                   <property name="text">
-                    <string>Y Axis</string>
-                   </property>
-                  </widget>
-                 </item>
-                 <item row="2" column="1">
-                  <widget class="QLabel" name="label_5">
-                   <property name="text">
-                    <string>X Axis</string>
-                   </property>
-                  </widget>
-                 </item>
-                 <item row="4" column="3">
-                  <widget class="StatusLabel" name="statuslabel_10">
-                   <property name="alignment">
-                    <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
-                   </property>
-                   <property name="rules" stdset="0">
-                    <string>[{&quot;channels&quot;: [{&quot;url&quot;: &quot;status:g92_offset&quot;, &quot;trigger&quot;: true}], &quot;property&quot;: &quot;Text&quot;, &quot;expression&quot;: &quot;str(ch[0][2])&quot;, &quot;name&quot;: &quot;Z Axis G92 Offset&quot;}]</string>
-                   </property>
-                  </widget>
-                 </item>
-                 <item row="2" column="3">
-                  <widget class="StatusLabel" name="statuslabel_6">
-                   <property name="alignment">
-                    <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
-                   </property>
-                   <property name="rules" stdset="0">
-                    <string>[{&quot;channels&quot;: [{&quot;url&quot;: &quot;status:g92_offset&quot;, &quot;trigger&quot;: true}], &quot;property&quot;: &quot;Text&quot;, &quot;expression&quot;: &quot;str(ch[0][0])&quot;, &quot;name&quot;: &quot;X Axis G92 Offset&quot;}]</string>
-                   </property>
-                  </widget>
-                 </item>
-                 <item row="3" column="3">
-                  <widget class="StatusLabel" name="statuslabel_8">
-                   <property name="alignment">
-                    <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
-                   </property>
-                   <property name="rules" stdset="0">
-                    <string>[{&quot;channels&quot;: [{&quot;url&quot;: &quot;status:g92_offset&quot;, &quot;trigger&quot;: true}], &quot;property&quot;: &quot;Text&quot;, &quot;expression&quot;: &quot;str(ch[0][1])&quot;, &quot;name&quot;: &quot;Y Axis G92 Offset&quot;}]</string>
-                   </property>
-                  </widget>
-                 </item>
-                 <item row="3" column="2">
-                  <widget class="StatusLabel" name="statuslabel_7">
-                   <property name="alignment">
-                    <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
-                   </property>
-                   <property name="rules" stdset="0">
-                    <string>[{&quot;channels&quot;: [{&quot;url&quot;: &quot;status:g5x_offset&quot;, &quot;trigger&quot;: true}], &quot;property&quot;: &quot;Text&quot;, &quot;expression&quot;: &quot;str(ch[0][1])&quot;, &quot;name&quot;: &quot;Y Axis G5x Offset&quot;}]</string>
-                   </property>
-                  </widget>
-                 </item>
-                 <item row="4" column="1">
-                  <widget class="QLabel" name="label_7">
-                   <property name="text">
-                    <string>Z Axis</string>
-                   </property>
-                  </widget>
-                 </item>
-                 <item row="4" column="2">
-                  <widget class="StatusLabel" name="statuslabel_9">
-                   <property name="alignment">
-                    <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
-                   </property>
-                   <property name="rules" stdset="0">
-                    <string>[{&quot;channels&quot;: [{&quot;url&quot;: &quot;status:g5x_offset&quot;, &quot;trigger&quot;: true}], &quot;property&quot;: &quot;Text&quot;, &quot;expression&quot;: &quot;str(ch[0][2])&quot;, &quot;name&quot;: &quot;Z Axis G5x Offset&quot;}]</string>
-                   </property>
-                  </widget>
-                 </item>
-                 <item row="2" column="2">
-                  <widget class="StatusLabel" name="statuslabel_5">
-                   <property name="alignment">
-                    <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
-                   </property>
-                   <property name="rules" stdset="0">
-                    <string>[{&quot;channels&quot;: [{&quot;url&quot;: &quot;status:g5x_offset&quot;, &quot;trigger&quot;: true}], &quot;property&quot;: &quot;Text&quot;, &quot;expression&quot;: &quot;str(ch[0][0])&quot;, &quot;name&quot;: &quot;X Axis G5x Offset&quot;}]</string>
-                   </property>
-                  </widget>
-                 </item>
-                 <item row="1" column="2">
-                  <widget class="QLabel" name="label_8">
-                   <property name="text">
-                    <string>G5x
-Offsets</string>
-                   </property>
-                  </widget>
-                 </item>
-                 <item row="1" column="3">
-                  <widget class="QLabel" name="label_9">
-                   <property name="text">
-                    <string>G92
-Offsets</string>
-                   </property>
-                  </widget>
-                 </item>
-                 <item row="4" column="0">
-                  <widget class="MDIButton" name="mdibutton_3">
-                   <property name="text">
-                    <string>Set
-Z0</string>
-                   </property>
-                   <property name="MDICommand" stdset="0">
-                    <string>G10L20P0Z0</string>
-                   </property>
-                  </widget>
-                 </item>
-                 <item row="2" column="4">
-                  <widget class="MDIButton" name="mdibutton_4">
-                   <property name="text">
-                    <string>Clear
-X</string>
-                   </property>
-                   <property name="MDICommand" stdset="0">
-                    <string>G10L2P0X0</string>
-                   </property>
-                  </widget>
-                 </item>
-                 <item row="3" column="4">
-                  <widget class="MDIButton" name="mdibutton_5">
-                   <property name="text">
-                    <string>Clear
-Y</string>
-                   </property>
-                   <property name="MDICommand" stdset="0">
-                    <string>G10L2P0Y0</string>
-                   </property>
-                  </widget>
-                 </item>
-                 <item row="4" column="4">
-                  <widget class="MDIButton" name="mdibutton_6">
-                   <property name="text">
-                    <string>Clear
-Z</string>
-                   </property>
-                   <property name="MDICommand" stdset="0">
-                    <string>G10L2P0Z0</string>
-                   </property>
-                  </widget>
-                 </item>
-                 <item row="1" column="0">
-                  <widget class="StatusLabel" name="statuslabel_4">
-                   <property name="rules" stdset="0">
-                    <string>[{&quot;channels&quot;: [{&quot;url&quot;: &quot;status:g5x_index&quot;, &quot;trigger&quot;: true}], &quot;property&quot;: &quot;Text&quot;, &quot;expression&quot;: &quot;\&quot;Set\\n\&quot;+[\&quot;G53\&quot;,\&quot;G54\&quot;,\&quot;G55\&quot;,\&quot;G56\&quot;,\&quot;G57\&quot;,\&quot;G58\&quot;,\&quot;G59\&quot;,\&quot;G59.1\&quot;,\&quot;G59.2\&quot;,\&quot;G59.3\&quot;][ch[0]]&quot;, &quot;name&quot;: &quot;Current Coord System&quot;}]</string>
-                   </property>
-                  </widget>
-                 </item>
-                </layout>
-               </widget>
-              </item>
-              <item row="1" column="0">
-               <widget class="MDIEntry" name="mdientry"/>
-              </item>
-             </layout>
-            </widget>
-           </widget>
-          </item>
-          <item>
-           <widget class="QTabWidget" name="tabWidget_2">
-            <property name="tabPosition">
-             <enum>QTabWidget::South</enum>
-            </property>
-            <property name="currentIndex">
-             <number>0</number>
-            </property>
-            <widget class="QWidget" name="tab_3">
-             <property name="styleSheet">
-              <string notr="true">QPushButton {
-    min-height: 50px;
-    min-width: 50px;
-    font: 14pt &quot;DejaVu Sans&quot;;
-}</string>
-             </property>
-             <attribute name="title">
-              <string>Backplot</string>
-             </attribute>
-             <layout class="QGridLayout" name="gridLayout_4">
-              <item row="2" column="3">
-               <widget class="QPushButton" name="yView">
-                <property name="text">
-                 <string>Y</string>
-                </property>
-               </widget>
-              </item>
-              <item row="1" column="1" colspan="7">
-               <widget class="GcodeBackplot" name="gcodebackplot">
-                <property name="_dro" stdset="0">
-                 <bool>false</bool>
-                </property>
-               </widget>
-              </item>
-              <item row="2" column="2">
-               <widget class="QPushButton" name="xView">
-                <property name="text">
-                 <string>X</string>
-                </property>
-               </widget>
-              </item>
-              <item row="2" column="5">
-               <widget class="QPushButton" name="viewZoomIn">
-                <property name="text">
-                 <string>+</string>
-                </property>
-               </widget>
-              </item>
-              <item row="2" column="4">
-               <widget class="QPushButton" name="zView">
-                <property name="text">
-                 <string>Z</string>
-                </property>
-               </widget>
-              </item>
-              <item row="2" column="1">
-               <widget class="QPushButton" name="pView">
-                <property name="text">
-                 <string>P</string>
-                </property>
-               </widget>
-              </item>
-              <item row="2" column="7">
-               <widget class="QPushButton" name="clearView">
-                <property name="text">
-                 <string>Clear</string>
-                </property>
-               </widget>
-              </item>
-              <item row="2" column="6">
-               <widget class="QPushButton" name="viewZoomOut">
-                <property name="text">
-                 <string>-</string>
-                </property>
-               </widget>
-              </item>
-             </layout>
-            </widget>
-            <widget class="QWidget" name="tab_4">
-             <attribute name="title">
-              <string>Status</string>
-             </attribute>
-             <layout class="QGridLayout" name="gridLayout_14">
-              <item row="0" column="0">
-               <widget class="QFrame" name="gridFrame">
-                <property name="styleSheet">
-                 <string notr="true">QLabel {
-    font: 12pt &quot;DejaVu Sans&quot;;
-}
-StatusLabel {
-    font: 12pt &quot;DejaVu Sans&quot;;
-}</string>
-                </property>
                 <property name="frameShape">
                  <enum>QFrame::Box</enum>
                 </property>
-                <property name="lineWidth">
-                 <number>2</number>
-                </property>
-                <layout class="QGridLayout" name="gridLayout_13">
+                <layout class="QGridLayout" name="gridLayout_10">
                  <property name="leftMargin">
                   <number>5</number>
                  </property>
@@ -752,27 +384,763 @@ StatusLabel {
                  <property name="bottomMargin">
                   <number>5</number>
                  </property>
-                 <item row="1" column="0">
-                  <widget class="StatusLabel" name="statuslabel_11">
-                   <property name="rules" stdset="0">
-                    <string>[{&quot;channels&quot;: [{&quot;url&quot;: &quot;status:mcodes?text&quot;, &quot;trigger&quot;: true}], &quot;property&quot;: &quot;Text&quot;, &quot;expression&quot;: &quot;\&quot;Active M codes\\n\&quot; + ch[0]&quot;, &quot;name&quot;: &quot;Active M codes&quot;}]</string>
+                 <item row="0" column="0" colspan="5">
+                  <widget class="MDIEntry" name="mdiEntry">
+                   <property name="font">
+                    <font>
+                     <family>DejaVu Sans</family>
+                     <pointsize>12</pointsize>
+                    </font>
                    </property>
                   </widget>
                  </item>
+                 <item row="1" column="3">
+                  <widget class="QPushButton" name="pushButton_4">
+                   <property name="text">
+                    <string>P</string>
+                   </property>
+                   <attribute name="buttonGroup">
+                    <string notr="true">mdiButtonGroup</string>
+                   </attribute>
+                  </widget>
+                 </item>
+                 <item row="1" column="0">
+                  <widget class="QPushButton" name="pushButton">
+                   <property name="text">
+                    <string>X</string>
+                   </property>
+                   <attribute name="buttonGroup">
+                    <string notr="true">mdiButtonGroup</string>
+                   </attribute>
+                  </widget>
+                 </item>
+                 <item row="2" column="0">
+                  <widget class="QPushButton" name="pushButton_2">
+                   <property name="text">
+                    <string>G</string>
+                   </property>
+                   <attribute name="buttonGroup">
+                    <string notr="true">mdiButtonGroup</string>
+                   </attribute>
+                  </widget>
+                 </item>
+                 <item row="1" column="4">
+                  <widget class="QPushButton" name="pushButton_3">
+                   <property name="text">
+                    <string>S</string>
+                   </property>
+                   <attribute name="buttonGroup">
+                    <string notr="true">mdiButtonGroup</string>
+                   </attribute>
+                  </widget>
+                 </item>
+                 <item row="1" column="2">
+                  <widget class="QPushButton" name="pushButton_5">
+                   <property name="text">
+                    <string>Z</string>
+                   </property>
+                   <attribute name="buttonGroup">
+                    <string notr="true">mdiButtonGroup</string>
+                   </attribute>
+                  </widget>
+                 </item>
+                 <item row="5" column="0">
+                  <widget class="QPushButton" name="pushButton_9">
+                   <property name="text">
+                    <string>1</string>
+                   </property>
+                   <attribute name="buttonGroup">
+                    <string notr="true">mdiButtonGroup</string>
+                   </attribute>
+                  </widget>
+                 </item>
+                 <item row="1" column="1">
+                  <widget class="QPushButton" name="pushButton_6">
+                   <property name="text">
+                    <string>Y</string>
+                   </property>
+                   <attribute name="buttonGroup">
+                    <string notr="true">mdiButtonGroup</string>
+                   </attribute>
+                  </widget>
+                 </item>
+                 <item row="2" column="1">
+                  <widget class="QPushButton" name="pushButton_7">
+                   <property name="text">
+                    <string>M</string>
+                   </property>
+                   <attribute name="buttonGroup">
+                    <string notr="true">mdiButtonGroup</string>
+                   </attribute>
+                  </widget>
+                 </item>
+                 <item row="6" column="0">
+                  <widget class="QPushButton" name="pushButton_8">
+                   <property name="text">
+                    <string>0</string>
+                   </property>
+                   <attribute name="buttonGroup">
+                    <string notr="true">mdiButtonGroup</string>
+                   </attribute>
+                  </widget>
+                 </item>
+                 <item row="3" column="0">
+                  <widget class="QPushButton" name="pushButton_10">
+                   <property name="text">
+                    <string>7</string>
+                   </property>
+                   <attribute name="buttonGroup">
+                    <string notr="true">mdiButtonGroup</string>
+                   </attribute>
+                  </widget>
+                 </item>
+                 <item row="4" column="0">
+                  <widget class="QPushButton" name="pushButton_11">
+                   <property name="text">
+                    <string>4</string>
+                   </property>
+                   <attribute name="buttonGroup">
+                    <string notr="true">mdiButtonGroup</string>
+                   </attribute>
+                  </widget>
+                 </item>
+                 <item row="6" column="1">
+                  <widget class="QPushButton" name="pushButton_12">
+                   <property name="text">
+                    <string>.</string>
+                   </property>
+                   <attribute name="buttonGroup">
+                    <string notr="true">mdiButtonGroup</string>
+                   </attribute>
+                  </widget>
+                 </item>
+                 <item row="6" column="2">
+                  <widget class="QPushButton" name="pushButton_13">
+                   <property name="text">
+                    <string>+</string>
+                   </property>
+                   <attribute name="buttonGroup">
+                    <string notr="true">mdiButtonGroup</string>
+                   </attribute>
+                  </widget>
+                 </item>
+                 <item row="6" column="3">
+                  <widget class="QPushButton" name="pushButton_14">
+                   <property name="text">
+                    <string>-</string>
+                   </property>
+                   <attribute name="buttonGroup">
+                    <string notr="true">mdiButtonGroup</string>
+                   </attribute>
+                  </widget>
+                 </item>
+                 <item row="6" column="4">
+                  <widget class="QPushButton" name="mdiEnterButton">
+                   <property name="text">
+                    <string>Enter</string>
+                   </property>
+                  </widget>
+                 </item>
+                 <item row="5" column="1">
+                  <widget class="QPushButton" name="pushButton_16">
+                   <property name="text">
+                    <string>2</string>
+                   </property>
+                   <attribute name="buttonGroup">
+                    <string notr="true">mdiButtonGroup</string>
+                   </attribute>
+                  </widget>
+                 </item>
+                 <item row="5" column="2">
+                  <widget class="QPushButton" name="pushButton_17">
+                   <property name="text">
+                    <string>3</string>
+                   </property>
+                   <attribute name="buttonGroup">
+                    <string notr="true">mdiButtonGroup</string>
+                   </attribute>
+                  </widget>
+                 </item>
+                 <item row="5" column="3">
+                  <widget class="QPushButton" name="pushButton_18">
+                   <property name="text">
+                    <string>T</string>
+                   </property>
+                   <attribute name="buttonGroup">
+                    <string notr="true">mdiButtonGroup</string>
+                   </attribute>
+                  </widget>
+                 </item>
+                 <item row="5" column="4">
+                  <widget class="QPushButton" name="mdiClearButton">
+                   <property name="text">
+                    <string>Clear</string>
+                   </property>
+                  </widget>
+                 </item>
+                 <item row="4" column="1">
+                  <widget class="QPushButton" name="pushButton_20">
+                   <property name="text">
+                    <string>5</string>
+                   </property>
+                   <attribute name="buttonGroup">
+                    <string notr="true">mdiButtonGroup</string>
+                   </attribute>
+                  </widget>
+                 </item>
+                 <item row="4" column="2">
+                  <widget class="QPushButton" name="pushButton_21">
+                   <property name="text">
+                    <string>6</string>
+                   </property>
+                   <attribute name="buttonGroup">
+                    <string notr="true">mdiButtonGroup</string>
+                   </attribute>
+                  </widget>
+                 </item>
+                 <item row="3" column="1">
+                  <widget class="QPushButton" name="pushButton_22">
+                   <property name="text">
+                    <string>8</string>
+                   </property>
+                   <attribute name="buttonGroup">
+                    <string notr="true">mdiButtonGroup</string>
+                   </attribute>
+                  </widget>
+                 </item>
+                 <item row="2" column="2">
+                  <widget class="QPushButton" name="pushButton_23">
+                   <property name="text">
+                    <string>I</string>
+                   </property>
+                   <attribute name="buttonGroup">
+                    <string notr="true">mdiButtonGroup</string>
+                   </attribute>
+                  </widget>
+                 </item>
+                 <item row="2" column="3">
+                  <widget class="QPushButton" name="pushButton_24">
+                   <property name="text">
+                    <string>J</string>
+                   </property>
+                   <attribute name="buttonGroup">
+                    <string notr="true">mdiButtonGroup</string>
+                   </attribute>
+                  </widget>
+                 </item>
+                 <item row="2" column="4">
+                  <widget class="QPushButton" name="pushButton_25">
+                   <property name="text">
+                    <string>K</string>
+                   </property>
+                   <attribute name="buttonGroup">
+                    <string notr="true">mdiButtonGroup</string>
+                   </attribute>
+                  </widget>
+                 </item>
+                 <item row="3" column="2">
+                  <widget class="QPushButton" name="pushButton_26">
+                   <property name="text">
+                    <string>9</string>
+                   </property>
+                   <attribute name="buttonGroup">
+                    <string notr="true">mdiButtonGroup</string>
+                   </attribute>
+                  </widget>
+                 </item>
+                 <item row="3" column="3">
+                  <widget class="QPushButton" name="pushButton_27">
+                   <property name="text">
+                    <string>D</string>
+                   </property>
+                   <attribute name="buttonGroup">
+                    <string notr="true">mdiButtonGroup</string>
+                   </attribute>
+                  </widget>
+                 </item>
+                 <item row="3" column="4">
+                  <widget class="QPushButton" name="pushButton_28">
+                   <property name="text">
+                    <string>Q</string>
+                   </property>
+                   <attribute name="buttonGroup">
+                    <string notr="true">mdiButtonGroup</string>
+                   </attribute>
+                  </widget>
+                 </item>
+                 <item row="4" column="3">
+                  <widget class="QPushButton" name="pushButton_29">
+                   <property name="text">
+                    <string>L</string>
+                   </property>
+                   <attribute name="buttonGroup">
+                    <string notr="true">mdiButtonGroup</string>
+                   </attribute>
+                  </widget>
+                 </item>
+                 <item row="4" column="4">
+                  <widget class="QPushButton" name="pushButton_30">
+                   <property name="text">
+                    <string>H</string>
+                   </property>
+                   <attribute name="buttonGroup">
+                    <string notr="true">mdiButtonGroup</string>
+                   </attribute>
+                  </widget>
+                 </item>
+                </layout>
+               </widget>
+              </item>
+             </layout>
+            </widget>
+           </widget>
+          </item>
+          <item>
+           <widget class="QTabWidget" name="tabWidget">
+            <property name="tabPosition">
+             <enum>QTabWidget::South</enum>
+            </property>
+            <property name="currentIndex">
+             <number>1</number>
+            </property>
+            <widget class="QWidget" name="tab">
+             <attribute name="title">
+              <string>Plot</string>
+             </attribute>
+             <layout class="QGridLayout" name="gridLayout_5">
+              <item row="0" column="0">
+               <widget class="QFrame" name="gridFrame">
+                <property name="frameShape">
+                 <enum>QFrame::Box</enum>
+                </property>
+                <layout class="QGridLayout" name="gridLayout_4">
+                 <property name="leftMargin">
+                  <number>5</number>
+                 </property>
+                 <property name="topMargin">
+                  <number>5</number>
+                 </property>
+                 <property name="rightMargin">
+                  <number>5</number>
+                 </property>
+                 <property name="bottomMargin">
+                  <number>5</number>
+                 </property>
                  <item row="0" column="0">
-                  <widget class="StatusLabel" name="statuslabel_12">
-                   <property name="wordWrap">
-                    <bool>true</bool>
+                  <widget class="GcodeBackplot" name="gcodebackplot"/>
+                 </item>
+                </layout>
+               </widget>
+              </item>
+              <item row="1" column="0">
+               <widget class="QFrame" name="horizontalFrame">
+                <property name="frameShape">
+                 <enum>QFrame::Box</enum>
+                </property>
+                <layout class="QHBoxLayout" name="horizontalLayout_2">
+                 <property name="leftMargin">
+                  <number>5</number>
+                 </property>
+                 <property name="topMargin">
+                  <number>5</number>
+                 </property>
+                 <property name="rightMargin">
+                  <number>5</number>
+                 </property>
+                 <property name="bottomMargin">
+                  <number>5</number>
+                 </property>
+                 <item>
+                  <widget class="QPushButton" name="pView">
+                   <property name="text">
+                    <string>P</string>
+                   </property>
+                  </widget>
+                 </item>
+                 <item>
+                  <widget class="QPushButton" name="xView">
+                   <property name="text">
+                    <string>X</string>
+                   </property>
+                  </widget>
+                 </item>
+                 <item>
+                  <widget class="QPushButton" name="yView">
+                   <property name="text">
+                    <string>Y</string>
+                   </property>
+                  </widget>
+                 </item>
+                 <item>
+                  <widget class="QPushButton" name="zView">
+                   <property name="text">
+                    <string>Z</string>
+                   </property>
+                  </widget>
+                 </item>
+                 <item>
+                  <widget class="QPushButton" name="zoomViewIn">
+                   <property name="text">
+                    <string>+</string>
+                   </property>
+                  </widget>
+                 </item>
+                 <item>
+                  <widget class="QPushButton" name="zoomViewOut">
+                   <property name="text">
+                    <string>-</string>
+                   </property>
+                  </widget>
+                 </item>
+                 <item>
+                  <widget class="QPushButton" name="clearView">
+                   <property name="text">
+                    <string>Clear</string>
+                   </property>
+                  </widget>
+                 </item>
+                </layout>
+               </widget>
+              </item>
+             </layout>
+            </widget>
+            <widget class="QWidget" name="tab_2">
+             <attribute name="title">
+              <string>Offsets</string>
+             </attribute>
+             <layout class="QGridLayout" name="gridLayout_13">
+              <item row="0" column="0">
+               <widget class="QFrame" name="gridFrame">
+                <property name="styleSheet">
+                 <string notr="true">QLabel {font: 12pt &quot;DejaVu Sans&quot;;}
+StatusLabel {font: 12pt &quot;DejaVu Sans&quot;;}</string>
+                </property>
+                <property name="frameShape">
+                 <enum>QFrame::Box</enum>
+                </property>
+                <layout class="QGridLayout" name="gridLayout_12">
+                 <property name="leftMargin">
+                  <number>5</number>
+                 </property>
+                 <property name="topMargin">
+                  <number>5</number>
+                 </property>
+                 <property name="rightMargin">
+                  <number>5</number>
+                 </property>
+                 <property name="bottomMargin">
+                  <number>5</number>
+                 </property>
+                 <item row="3" column="0">
+                  <widget class="QPushButton" name="pushButton_32">
+                   <property name="text">
+                    <string>7</string>
+                   </property>
+                   <attribute name="buttonGroup">
+                    <string notr="true">offsetButtonGroup</string>
+                   </attribute>
+                  </widget>
+                 </item>
+                 <item row="3" column="3">
+                  <widget class="QPushButton" name="pushButton_15">
+                   <property name="text">
+                    <string>+</string>
+                   </property>
+                   <attribute name="buttonGroup">
+                    <string notr="true">offsetButtonGroup</string>
+                   </attribute>
+                  </widget>
+                 </item>
+                 <item row="5" column="0">
+                  <widget class="QPushButton" name="pushButton_37">
+                   <property name="text">
+                    <string>1</string>
+                   </property>
+                   <attribute name="buttonGroup">
+                    <string notr="true">offsetButtonGroup</string>
+                   </attribute>
+                  </widget>
+                 </item>
+                 <item row="5" column="2">
+                  <widget class="QPushButton" name="pushButton_39">
+                   <property name="text">
+                    <string>3</string>
+                   </property>
+                   <attribute name="buttonGroup">
+                    <string notr="true">offsetButtonGroup</string>
+                   </attribute>
+                  </widget>
+                 </item>
+                 <item row="6" column="2">
+                  <widget class="QPushButton" name="pushButton_43">
+                   <property name="text">
+                    <string>0.25</string>
+                   </property>
+                   <attribute name="buttonGroup">
+                    <string notr="true">offsetButtonGroup</string>
+                   </attribute>
+                  </widget>
+                 </item>
+                 <item row="6" column="1">
+                  <widget class="QPushButton" name="pushButton_42">
+                   <property name="text">
+                    <string>-0.25</string>
+                   </property>
+                   <attribute name="buttonGroup">
+                    <string notr="true">offsetButtonGroup</string>
+                   </attribute>
+                  </widget>
+                 </item>
+                 <item row="4" column="1">
+                  <widget class="QPushButton" name="pushButton_34">
+                   <property name="text">
+                    <string>5</string>
+                   </property>
+                   <attribute name="buttonGroup">
+                    <string notr="true">offsetButtonGroup</string>
+                   </attribute>
+                  </widget>
+                 </item>
+                 <item row="6" column="0">
+                  <widget class="QPushButton" name="pushButton_41">
+                   <property name="text">
+                    <string>0</string>
+                   </property>
+                   <attribute name="buttonGroup">
+                    <string notr="true">offsetButtonGroup</string>
+                   </attribute>
+                  </widget>
+                 </item>
+                 <item row="7" column="2">
+                  <widget class="MDIButton" name="mdibutton_3">
+                   <property name="text">
+                    <string>Set
+Z</string>
+                   </property>
+                   <property name="MDICommand" stdset="0">
+                    <string>G10L20P0Z#&lt;offsetLabel&gt;</string>
+                   </property>
+                  </widget>
+                 </item>
+                 <item row="2" column="2">
+                  <widget class="StatusLabel" name="statuslabel_3">
+                   <property name="alignment">
+                    <set>Qt::AlignCenter</set>
                    </property>
                    <property name="rules" stdset="0">
-                    <string>[{&quot;channels&quot;: [{&quot;url&quot;: &quot;status:gcodes?text&quot;, &quot;trigger&quot;: true}], &quot;property&quot;: &quot;Text&quot;, &quot;expression&quot;: &quot;\&quot;Active G codes\\n\&quot; + ch[0]&quot;, &quot;name&quot;: &quot;Active G codes&quot;}]</string>
+                    <string>[{&quot;channels&quot;: [{&quot;url&quot;: &quot;status:g92_offset&quot;, &quot;trigger&quot;: true}], &quot;property&quot;: &quot;Text&quot;, &quot;expression&quot;: &quot;str(ch[0][1])&quot;, &quot;name&quot;: &quot;Y Axis G92 Offset&quot;}]</string>
+                   </property>
+                  </widget>
+                 </item>
+                 <item row="1" column="2">
+                  <widget class="StatusLabel" name="statuslabel_4">
+                   <property name="alignment">
+                    <set>Qt::AlignCenter</set>
+                   </property>
+                   <property name="rules" stdset="0">
+                    <string>[{&quot;channels&quot;: [{&quot;url&quot;: &quot;status:g5x_offset&quot;, &quot;trigger&quot;: true}], &quot;property&quot;: &quot;Text&quot;, &quot;expression&quot;: &quot;str(ch[0][1])&quot;, &quot;name&quot;: &quot;Y Axis G5x Offset&quot;}]</string>
+                   </property>
+                  </widget>
+                 </item>
+                 <item row="2" column="1">
+                  <widget class="StatusLabel" name="statuslabel_5">
+                   <property name="alignment">
+                    <set>Qt::AlignCenter</set>
+                   </property>
+                   <property name="rules" stdset="0">
+                    <string>[{&quot;channels&quot;: [{&quot;url&quot;: &quot;status:g92_offset&quot;, &quot;trigger&quot;: true}], &quot;property&quot;: &quot;Text&quot;, &quot;expression&quot;: &quot;str(ch[0][0])&quot;, &quot;name&quot;: &quot;X Axis G92 Offset&quot;}]</string>
+                   </property>
+                  </widget>
+                 </item>
+                 <item row="4" column="3">
+                  <widget class="QPushButton" name="pushButton_36">
+                   <property name="text">
+                    <string>-</string>
+                   </property>
+                   <attribute name="buttonGroup">
+                    <string notr="true">offsetButtonGroup</string>
+                   </attribute>
+                  </widget>
+                 </item>
+                 <item row="4" column="2">
+                  <widget class="QPushButton" name="pushButton_35">
+                   <property name="text">
+                    <string>6</string>
+                   </property>
+                   <attribute name="buttonGroup">
+                    <string notr="true">offsetButtonGroup</string>
+                   </attribute>
+                  </widget>
+                 </item>
+                 <item row="3" column="2">
+                  <widget class="QPushButton" name="pushButton_19">
+                   <property name="text">
+                    <string>9</string>
+                   </property>
+                   <attribute name="buttonGroup">
+                    <string notr="true">offsetButtonGroup</string>
+                   </attribute>
+                  </widget>
+                 </item>
+                 <item row="2" column="3">
+                  <widget class="StatusLabel" name="statuslabel_2">
+                   <property name="alignment">
+                    <set>Qt::AlignCenter</set>
+                   </property>
+                   <property name="rules" stdset="0">
+                    <string>[{&quot;channels&quot;: [{&quot;url&quot;: &quot;status:g92_offset&quot;, &quot;trigger&quot;: true}], &quot;property&quot;: &quot;Text&quot;, &quot;expression&quot;: &quot;str(ch[0][2])&quot;, &quot;name&quot;: &quot;Z Axis G92 Offset&quot;}]</string>
+                   </property>
+                  </widget>
+                 </item>
+                 <item row="3" column="1">
+                  <widget class="QPushButton" name="pushButton_31">
+                   <property name="text">
+                    <string>8</string>
+                   </property>
+                   <attribute name="buttonGroup">
+                    <string notr="true">offsetButtonGroup</string>
+                   </attribute>
+                  </widget>
+                 </item>
+                 <item row="7" column="1">
+                  <widget class="MDIButton" name="mdibutton_2">
+                   <property name="text">
+                    <string>Set
+Y</string>
+                   </property>
+                   <property name="MDICommand" stdset="0">
+                    <string>G10L20P0Y#&lt;offsetLabel&gt;</string>
+                   </property>
+                  </widget>
+                 </item>
+                 <item row="7" column="3">
+                  <widget class="QLabel" name="offsetLabel">
+                   <property name="frameShape">
+                    <enum>QFrame::Box</enum>
+                   </property>
+                   <property name="text">
+                    <string/>
+                   </property>
+                   <property name="alignment">
+                    <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
+                   </property>
+                  </widget>
+                 </item>
+                 <item row="7" column="0">
+                  <widget class="MDIButton" name="mdibutton">
+                   <property name="text">
+                    <string>Set
+X</string>
+                   </property>
+                   <property name="MDICommand" stdset="0">
+                    <string>G10L20P0X#&lt;offsetLabel&gt;</string>
+                   </property>
+                  </widget>
+                 </item>
+                 <item row="4" column="0">
+                  <widget class="QPushButton" name="pushButton_33">
+                   <property name="text">
+                    <string>4</string>
+                   </property>
+                   <attribute name="buttonGroup">
+                    <string notr="true">offsetButtonGroup</string>
+                   </attribute>
+                  </widget>
+                 </item>
+                 <item row="6" column="3">
+                  <widget class="QPushButton" name="clearOffsetLabel">
+                   <property name="text">
+                    <string>Clear</string>
+                   </property>
+                  </widget>
+                 </item>
+                 <item row="1" column="1">
+                  <widget class="StatusLabel" name="statuslabel_6">
+                   <property name="alignment">
+                    <set>Qt::AlignCenter</set>
+                   </property>
+                   <property name="rules" stdset="0">
+                    <string>[{&quot;channels&quot;: [{&quot;url&quot;: &quot;status:g5x_offset&quot;, &quot;trigger&quot;: true}], &quot;property&quot;: &quot;Text&quot;, &quot;expression&quot;: &quot;str(ch[0][0])&quot;, &quot;name&quot;: &quot;X Axis G5x Offset&quot;}]</string>
+                   </property>
+                  </widget>
+                 </item>
+                 <item row="5" column="3">
+                  <widget class="QPushButton" name="pushButton_40">
+                   <property name="text">
+                    <string>.</string>
+                   </property>
+                   <attribute name="buttonGroup">
+                    <string notr="true">offsetButtonGroup</string>
+                   </attribute>
+                  </widget>
+                 </item>
+                 <item row="1" column="3">
+                  <widget class="StatusLabel" name="statuslabel">
+                   <property name="alignment">
+                    <set>Qt::AlignCenter</set>
+                   </property>
+                   <property name="rules" stdset="0">
+                    <string>[{&quot;channels&quot;: [{&quot;url&quot;: &quot;status:g5x_offset&quot;, &quot;trigger&quot;: true}], &quot;property&quot;: &quot;Text&quot;, &quot;expression&quot;: &quot;str(ch[0][2])&quot;, &quot;name&quot;: &quot;Z Axis G5x Offset&quot;}]</string>
+                   </property>
+                  </widget>
+                 </item>
+                 <item row="1" column="0">
+                  <widget class="QLabel" name="label_5">
+                   <property name="text">
+                    <string>G5x Offsets</string>
+                   </property>
+                   <property name="alignment">
+                    <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
                    </property>
                   </widget>
                  </item>
                  <item row="2" column="0">
-                  <widget class="StatusLabel" name="statuslabel_13">
-                   <property name="rules" stdset="0">
-                    <string>[{&quot;channels&quot;: [{&quot;url&quot;: &quot;status:tool_offset&quot;, &quot;trigger&quot;: true}], &quot;property&quot;: &quot;Text&quot;, &quot;expression&quot;: &quot;str(ch[0])&quot;, &quot;name&quot;: &quot;Tool Offset&quot;}]</string>
+                  <widget class="QLabel" name="label_4">
+                   <property name="text">
+                    <string>G92 Offsets</string>
+                   </property>
+                   <property name="alignment">
+                    <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
+                   </property>
+                  </widget>
+                 </item>
+                 <item row="5" column="1">
+                  <widget class="QPushButton" name="pushButton_38">
+                   <property name="text">
+                    <string>2</string>
+                   </property>
+                   <attribute name="buttonGroup">
+                    <string notr="true">offsetButtonGroup</string>
+                   </attribute>
+                  </widget>
+                 </item>
+                 <item row="0" column="1">
+                  <widget class="QLabel" name="label_6">
+                   <property name="text">
+                    <string>X Axis</string>
+                   </property>
+                   <property name="alignment">
+                    <set>Qt::AlignCenter</set>
+                   </property>
+                  </widget>
+                 </item>
+                 <item row="0" column="2">
+                  <widget class="QLabel" name="label_7">
+                   <property name="text">
+                    <string>Y Axis</string>
+                   </property>
+                   <property name="alignment">
+                    <set>Qt::AlignCenter</set>
+                   </property>
+                  </widget>
+                 </item>
+                 <item row="0" column="3">
+                  <widget class="QLabel" name="label_8">
+                   <property name="text">
+                    <string>Z Axis</string>
+                   </property>
+                   <property name="alignment">
+                    <set>Qt::AlignCenter</set>
                    </property>
                   </widget>
                  </item>
@@ -788,19 +1156,8 @@ StatusLabel {
        </item>
        <item>
         <widget class="QFrame" name="gridFrame">
-         <property name="styleSheet">
-          <string notr="true">ActionButton {
-    min-height: 50px;
-    min-width: 50px;
-    font: 14pt &quot;DejaVu Sans&quot;;
-}
-</string>
-         </property>
          <property name="frameShape">
           <enum>QFrame::Box</enum>
-         </property>
-         <property name="lineWidth">
-          <number>2</number>
          </property>
          <layout class="QGridLayout" name="gridLayout">
           <property name="leftMargin">
@@ -815,10 +1172,23 @@ StatusLabel {
           <property name="bottomMargin">
            <number>5</number>
           </property>
+          <item row="0" column="0">
+           <widget class="ActionButton" name="actionbutton_3">
+            <property name="text">
+             <string>E Stop</string>
+            </property>
+            <property name="checkable">
+             <bool>true</bool>
+            </property>
+            <property name="actionName" stdset="0">
+             <string>machine.estop.toggle</string>
+            </property>
+           </widget>
+          </item>
           <item row="0" column="2">
            <widget class="ActionButton" name="actionbutton">
             <property name="rules" stdset="0">
-             <string>[{&quot;channels&quot;: [{&quot;url&quot;: &quot;status:joint[0].homed&quot;, &quot;trigger&quot;: true}, {&quot;url&quot;: &quot;status:joint[1].homed&quot;, &quot;trigger&quot;: true}, {&quot;url&quot;: &quot;status:joint[2].homed&quot;, &quot;trigger&quot;: true}], &quot;property&quot;: &quot;Text&quot;, &quot;expression&quot;: &quot;'Homed' if ch[0] and ch[1] and ch[2] else 'Home\\nAll'&quot;, &quot;name&quot;: &quot;Button Name&quot;}, {&quot;channels&quot;: [{&quot;url&quot;: &quot;status:joint[0].homed&quot;, &quot;trigger&quot;: true}, {&quot;url&quot;: &quot;status:joint[1].homed&quot;, &quot;trigger&quot;: true}, {&quot;url&quot;: &quot;status:joint[2].homed&quot;, &quot;trigger&quot;: true}], &quot;property&quot;: &quot;Style Sheet&quot;, &quot;expression&quot;: &quot;\&quot;background-color:rgb(138, 226, 52)\&quot; if ch[0] and ch[1] and ch[2] else ''&quot;, &quot;name&quot;: &quot;Backcolor&quot;}]</string>
+             <string>[{&quot;channels&quot;: [{&quot;url&quot;: &quot;status:joint[0].homed&quot;, &quot;trigger&quot;: true}, {&quot;url&quot;: &quot;status:joint[1].homed&quot;, &quot;trigger&quot;: true}, {&quot;url&quot;: &quot;status:joint[2].homed&quot;, &quot;trigger&quot;: true}], &quot;property&quot;: &quot;Text&quot;, &quot;expression&quot;: &quot;'Homed' if ch[0] and ch[1] and ch[2] else 'Home\\nAll'&quot;, &quot;name&quot;: &quot;Text&quot;}, {&quot;channels&quot;: [{&quot;url&quot;: &quot;status:joint[0].homed&quot;, &quot;trigger&quot;: true}, {&quot;url&quot;: &quot;status:joint[1].homed&quot;, &quot;trigger&quot;: true}, {&quot;url&quot;: &quot;status:joint[2].homed&quot;, &quot;trigger&quot;: true}], &quot;property&quot;: &quot;Style Sheet&quot;, &quot;expression&quot;: &quot;\&quot;background-color:rgb(138, 226, 52)\&quot; if ch[0] and ch[1] and ch[2] else ''&quot;, &quot;name&quot;: &quot;Color&quot;}]</string>
             </property>
             <property name="actionName" stdset="0">
              <string>machine.home.all</string>
@@ -849,7 +1219,7 @@ StatusLabel {
            </widget>
           </item>
           <item row="0" column="4">
-           <widget class="ActionButton" name="actionbutton_5">
+           <widget class="ActionButton" name="actionbutton_7">
             <property name="text">
              <string>Step</string>
             </property>
@@ -858,21 +1228,8 @@ StatusLabel {
             </property>
            </widget>
           </item>
-          <item row="0" column="0">
-           <widget class="ActionButton" name="actionbutton_3">
-            <property name="text">
-             <string>E Stop</string>
-            </property>
-            <property name="checkable">
-             <bool>true</bool>
-            </property>
-            <property name="actionName" stdset="0">
-             <string>machine.estop.toggle</string>
-            </property>
-           </widget>
-          </item>
           <item row="0" column="6">
-           <widget class="ActionButton" name="actionbutton_7">
+           <widget class="ActionButton" name="actionbutton_5">
             <property name="text">
              <string>Resume</string>
             </property>
@@ -881,23 +1238,23 @@ StatusLabel {
             </property>
            </widget>
           </item>
-          <item row="0" column="3">
-           <widget class="ActionButton" name="actionbutton_4">
-            <property name="text">
-             <string>Run</string>
-            </property>
-            <property name="actionName" stdset="0">
-             <string>program.run</string>
-            </property>
-           </widget>
-          </item>
           <item row="0" column="7">
-           <widget class="ActionButton" name="actionbutton_8">
+           <widget class="ActionButton" name="actionbutton_4">
             <property name="text">
              <string>Abort</string>
             </property>
             <property name="actionName" stdset="0">
              <string>program.abort</string>
+            </property>
+           </widget>
+          </item>
+          <item row="0" column="3">
+           <widget class="ActionButton" name="actionbutton_8">
+            <property name="text">
+             <string>Run</string>
+            </property>
+            <property name="actionName" stdset="0">
+             <string>program.run</string>
             </property>
            </widget>
           </item>
@@ -989,66 +1346,18 @@ StatusLabel {
  <resources/>
  <connections>
   <connection>
-   <sender>navUp</sender>
-   <signal>clicked()</signal>
-   <receiver>filesystemtable</receiver>
-   <slot>selectPrevious()</slot>
-   <hints>
-    <hint type="sourcelabel">
-     <x>83</x>
-     <y>433</y>
-    </hint>
-    <hint type="destinationlabel">
-     <x>185</x>
-     <y>211</y>
-    </hint>
-   </hints>
-  </connection>
-  <connection>
-   <sender>navDown</sender>
-   <signal>clicked()</signal>
-   <receiver>filesystemtable</receiver>
-   <slot>selectNext()</slot>
-   <hints>
-    <hint type="sourcelabel">
-     <x>185</x>
-     <y>433</y>
-    </hint>
-    <hint type="destinationlabel">
-     <x>185</x>
-     <y>211</y>
-    </hint>
-   </hints>
-  </connection>
-  <connection>
-   <sender>navSelect</sender>
-   <signal>clicked()</signal>
-   <receiver>filesystemtable</receiver>
-   <slot>openSelectedItem()</slot>
-   <hints>
-    <hint type="sourcelabel">
-     <x>287</x>
-     <y>433</y>
-    </hint>
-    <hint type="destinationlabel">
-     <x>185</x>
-     <y>211</y>
-    </hint>
-   </hints>
-  </connection>
-  <connection>
    <sender>pView</sender>
    <signal>clicked()</signal>
    <receiver>gcodebackplot</receiver>
    <slot>setViewP()</slot>
    <hints>
     <hint type="sourcelabel">
-     <x>421</x>
-     <y>415</y>
+     <x>370</x>
+     <y>395</y>
     </hint>
     <hint type="destinationlabel">
-     <x>575</x>
-     <y>208</y>
+     <x>552</x>
+     <y>194</y>
     </hint>
    </hints>
   </connection>
@@ -1059,12 +1368,12 @@ StatusLabel {
    <slot>setViewX()</slot>
    <hints>
     <hint type="sourcelabel">
-     <x>498</x>
-     <y>415</y>
+     <x>430</x>
+     <y>395</y>
     </hint>
     <hint type="destinationlabel">
-     <x>575</x>
-     <y>208</y>
+     <x>552</x>
+     <y>194</y>
     </hint>
    </hints>
   </connection>
@@ -1075,12 +1384,12 @@ StatusLabel {
    <slot>setViewY()</slot>
    <hints>
     <hint type="sourcelabel">
-     <x>575</x>
-     <y>415</y>
+     <x>491</x>
+     <y>395</y>
     </hint>
     <hint type="destinationlabel">
-     <x>575</x>
-     <y>208</y>
+     <x>552</x>
+     <y>194</y>
     </hint>
    </hints>
   </connection>
@@ -1091,12 +1400,44 @@ StatusLabel {
    <slot>setViewZ()</slot>
    <hints>
     <hint type="sourcelabel">
-     <x>653</x>
-     <y>415</y>
+     <x>552</x>
+     <y>395</y>
     </hint>
     <hint type="destinationlabel">
-     <x>575</x>
-     <y>208</y>
+     <x>552</x>
+     <y>194</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>zoomViewIn</sender>
+   <signal>clicked()</signal>
+   <receiver>gcodebackplot</receiver>
+   <slot>zoomIn()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>613</x>
+     <y>395</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>552</x>
+     <y>194</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>zoomViewOut</sender>
+   <signal>clicked()</signal>
+   <receiver>gcodebackplot</receiver>
+   <slot>zoomOut()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>673</x>
+     <y>395</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>552</x>
+     <y>194</y>
     </hint>
    </hints>
   </connection>
@@ -1107,46 +1448,114 @@ StatusLabel {
    <slot>clearLivePlot()</slot>
    <hints>
     <hint type="sourcelabel">
-     <x>730</x>
-     <y>415</y>
+     <x>734</x>
+     <y>395</y>
     </hint>
     <hint type="destinationlabel">
-     <x>575</x>
-     <y>208</y>
+     <x>552</x>
+     <y>194</y>
     </hint>
    </hints>
   </connection>
   <connection>
-   <sender>viewZoomIn</sender>
+   <sender>navUp</sender>
    <signal>clicked()</signal>
-   <receiver>gcodebackplot</receiver>
-   <slot>zoomIn()</slot>
+   <receiver>filesystemtable</receiver>
+   <slot>selectPrevious()</slot>
    <hints>
     <hint type="sourcelabel">
-     <x>627</x>
-     <y>415</y>
+     <x>83</x>
+     <y>386</y>
     </hint>
     <hint type="destinationlabel">
-     <x>569</x>
-     <y>208</y>
+     <x>170</x>
+     <y>191</y>
     </hint>
    </hints>
   </connection>
   <connection>
-   <sender>viewZoomOut</sender>
+   <sender>navDown</sender>
    <signal>clicked()</signal>
-   <receiver>gcodebackplot</receiver>
-   <slot>zoomOut()</slot>
+   <receiver>filesystemtable</receiver>
+   <slot>selectNext()</slot>
    <hints>
     <hint type="sourcelabel">
-     <x>684</x>
-     <y>415</y>
+     <x>170</x>
+     <y>386</y>
     </hint>
     <hint type="destinationlabel">
-     <x>569</x>
-     <y>208</y>
+     <x>170</x>
+     <y>191</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>navSelect</sender>
+   <signal>clicked()</signal>
+   <receiver>filesystemtable</receiver>
+   <slot>openSelectedItem()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>256</x>
+     <y>386</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>170</x>
+     <y>191</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>mdiEnterButton</sender>
+   <signal>clicked()</signal>
+   <receiver>mdiEntry</receiver>
+   <slot>submit()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>295</x>
+     <y>394</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>179</x>
+     <y>49</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>mdiClearButton</sender>
+   <signal>clicked()</signal>
+   <receiver>mdiEntry</receiver>
+   <slot>clear()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>295</x>
+     <y>334</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>179</x>
+     <y>49</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>clearOffsetLabel</sender>
+   <signal>clicked()</signal>
+   <receiver>offsetLabel</receiver>
+   <slot>clear()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>714</x>
+     <y>302</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>714</x>
+     <y>377</y>
     </hint>
    </hints>
   </connection>
  </connections>
+ <buttongroups>
+  <buttongroup name="mdiButtonGroup"/>
+  <buttongroup name="offsetButtonGroup"/>
+ </buttongroups>
 </ui>
